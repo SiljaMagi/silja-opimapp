@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="/pildid/favi.png" type="image/x-icon">
+<title>Silja Õpimapp</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+    /* Style the heading and text */
+
+.full_image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-image: url('pildid/avapilt.jpg'); /* Pilt kaustast */
+  background-size: cover; /* Katab kogu ala */
+  background-position: center; /* Tsentreeritud pilt */
+  background-repeat: no-repeat;
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+ justify-content: center;
+}
+
+.navigation-menu {
+  position: fixed; /* Menüü jääb nähtavaks isegi kerimisel */
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+}
+
+.container {
+
+min-width: 100%;
+min-height: 100%;
+align-content: center;
+}
+
+.header-title {
+  position: relative;
+  text-align: right;
+  font-size: 7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+padding-right: 20%;
+margin-top: -30rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Unbounded, sans-serif;
+  color: var(--Phivrv, #78cddb);
+}
+
+
+/*
+@media (orientation:portrait) {
+
+}
+  */
+  </style>
+  </head>
+		<body>
+      <body>
+        
+        
+      
+          <div class="full_image">
+            <header id="navigation-menu"></header>
+           <div class="container">
+       
+          <h1 class="header-title">
+            Silja Mägi
+            <br />
+            Õpimapp
+          </h1>
+        </div>
+      </div>
+      <script>
+     // Laeb menüü menu.html failist ja asetab selle #menu-container sisse
+document.addEventListener('DOMContentLoaded', () => {
+  const menuContainer = document.getElementById('navigation-menu');
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      menuContainer.innerHTML = data;
+    })
+    .catch(error => console.error('Menüü laadimine ebaõnnestus:', error));
+});
+
+
+	
+          </script>
+</body>
+</html>
