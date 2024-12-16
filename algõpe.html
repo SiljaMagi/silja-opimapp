@@ -43,36 +43,29 @@
             background-color: white;
         }
 
-.container {
-margin-top: 15rem;
-max-width: 100%;
-max-height: 100%;
-align-content: left;
-display: flex; 
-  flex-direction: column;
-  align-items: left;
- 
-  justify-content: left;
+        .container {
+  margin: 0 10rem 3rem 10rem;
+  display: flex;
+  flex-wrap: wrap; /* Luba elementidel murduda järgmisele reale */
+  gap: 2rem; /* Lisa vahed piltide vahele */
+  justify-content: flex-start; /* Paiguta vasakule */
 }
-
-
 
 .image-container {
-    position: relative;
-    display: inline-block;
-    max-width: 90%;
-    margin-bottom: 3rem;
-    margin: 0 10rem 3rem 10rem;
-
+  flex: 0 1 auto; /* Võtab automaatselt vajaliku laiuse, kuid mahub teiste kõrvale, kui ruumi on */
+  margin-bottom: 2rem; /* Lisa alumine vahe */
 }
+
 .image-container img {
-    display: block;
-    max-width: 90%;
-    height: auto;
-    max-height: 80rem;
+  display: block;
+  max-height: 80rem; /* Maksimaalne kõrgus */
+  height: auto; /* Säilitab kõrguse proportsioonid */
+  width: auto; /* Pildi laiuse proportsioonid säilivad */
+  max-width: 100%; /* Veendu, et pilt ei lähe üle konteineri laiuse */
+  object-fit: contain; /* Säilita proportsioonid */
 }
 div.üld h1 {
-  font-size: 4rem ;
+  font-size: 8rem ;
   margin: 15rem 0 0 0;
   padding-left: 10rem;
 }
@@ -128,17 +121,50 @@ div.üld h2 {
                 
                     <img src="pildid/nimekaart.png" alt="uxui">    
             </div>
+          </div>
             <div class="horizontal-line"></div>
               <div class="tekst">
                 <h2>Õpimapile wireframe loomine</h2>
-                  <p>Õppisime kuidas Figmat kasutada nii, et sellest ka aredaja õige ja vajaliku info kätte saab. Link tööle: https://www.figma.com/design/cbQQg0Bc6hwJsKR9JFBskT/%C3%B5pimapi-wireframe?node-id=0-1&node-type=canvas&t=JMnjB44hKkT98C3P-0</p>
+                  <p>Õppisime kuidas Figmat kasutada nii, et sellest ka aredaja õige ja vajaliku info kätte saab. Link tööle: https://www.figma.com/design/cbQQg0Bc6hwJsKR9JFBskT/%C3%B5pimapi-wireframe?node-id=0-1&t=dAGrQyXy6bXT2fa0-1</p>
+            </div>
+            <div class="container">
+            <div class="image-container">
+                
+                    <img src="pildid/Artboard 1-100.jpg" alt="uxui">
             </div>
             <div class="image-container">
                 
-                    <img src="pildid/uxui3.jpg" alt="uxui">
-                  
-              
-            </div>
+              <img src="pildid/Artboard 2-100.jpg" alt="uxui">
+      </div>
+      <div class="image-container">
+                
+        <img src="pildid/Artboard 3-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Artboard 4-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Artboard 5-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Artboard 6-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Artboard 7-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Artboard 8-100.jpg" alt="uxui">
+</div>
+<div class="image-container">
+                
+  <img src="pildid/Screenshot 2024-11-21 204042.png" alt="uxui">
+</div>
+</div>
         </div>
       </div>
       <script>
