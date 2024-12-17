@@ -62,13 +62,65 @@ margin-top: -30rem;
   font-family: Unbounded, sans-serif;
   color: var(--Phivrv, #78cddb);
 }
-
-
-/*
-@media (orientation:portrait) {
-
+#burger-icon {
+  display: none;
 }
-  */
+
+
+@media (orientation:portrait) {
+  .full_image {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-image: url('pildid/mobiil.jpg'); /* Pilt kaustast */
+  background-size: cover; /* Katab kogu ala */
+  background-position: center; /* Tsentreeritud pilt */
+  background-repeat: no-repeat;
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: center;
+  flex-direction: column;
+ justify-content: center;
+}
+
+.header-title {
+  position: relative;
+  text-align: left;
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+padding-left: 10%;
+margin-top: -30rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: Unbounded, sans-serif;
+  color: var(--Phivrv, #78cddb);
+}
+#burger-icon {
+    display: block;
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 5rem; /* Adjust positioning */
+    left: 10%;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  #navigation-menu {
+    /* Hide the original menu content in portrait mode */
+    display: none;
+  }
+
+  
+  }
+
+  
   </style>
   </head>
 		<body>
@@ -77,7 +129,11 @@ margin-top: -30rem;
         
       
           <div class="full_image">
-            <header id="navigation-menu"></header>
+            <header id="navigation-menu"> <img id="burger-icon" src="pildid/burger.svg" alt="Menu"></header>
+            <a href="mobiilimenu.html" id="burger-link">
+            <header id="burger-menu"> <img id="burger-icon" src="pildid/burger.svg" alt="Menu"></header>
+          </a>
+            <div class="ruut"></div>
            <div class="container">
        
           <h1 class="header-title">
@@ -88,19 +144,23 @@ margin-top: -30rem;
         </div>
       </div>
       <script>
-     // Laeb menüü menu.html failist ja asetab selle #menu-container sisse
-document.addEventListener('DOMContentLoaded', () => {
-  const menuContainer = document.getElementById('navigation-menu');
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(data => {
-      menuContainer.innerHTML = data;
-    })
-    .catch(error => console.error('Menüü laadimine ebaõnnestus:', error));
-});
-
-
-	
-          </script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const burgerIcon = document.getElementById('burger-icon');
+          const menuContainer = document.getElementById('navigation-menu');
+        
+          // Load menu normally
+          fetch('menu.html')
+            .then(response => response.text())
+            .then(data => {
+              menuContainer.innerHTML += data; // Add menu content
+            })
+            .catch(error => console.error('Menüü laadimine ebaõnnestus:', error));
+        
+          // Function to handle burger icon click
+          burgerIcon.addEventListener('click', function() {
+            window.location.href = "mobiilimenu.html";
+          });
+        });
+        </script>
 </body>
 </html>
