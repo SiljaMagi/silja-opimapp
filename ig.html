@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="/pildid/favi.png" type="image/x-icon">
+<title>Silja Õpimapp</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
+    /* Style the heading and text */
+
+
+.üld {
+  height: auto;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  align-items: left;
+  text-align: left;
+ justify-content: center;
+ color: #025F81 ;
+
+}
+
+.navigation-menu {
+  position: fixed; /* Menüü jääb nähtavaks isegi kerimisel */
+  top: 0;
+  left: 0;
+  width: 100%;
+ 
+ 
+}
+
+.menu {
+           
+            position: fixed;
+            z-index: 10;
+            background-color: white;
+        }
+
+        .container {
+  margin: 0 10rem 3rem 10rem;
+  display: flex;
+  flex-wrap: wrap; /* Luba elementidel murduda järgmisele reale */
+  gap: 2rem; /* Lisa vahed piltide vahele */
+  justify-content: flex-start; /* Paiguta vasakule */
+}
+
+.image-container {
+  flex: 0 1 auto; /* Võtab automaatselt vajaliku laiuse, kuid mahub teiste kõrvale, kui ruumi on */
+  margin-bottom: 2rem; /* Lisa alumine vahe */
+}
+
+.image-container img {
+  display: block;
+  max-height: 80rem; /* Maksimaalne kõrgus */
+  height: auto; /* Säilitab kõrguse proportsioonid */
+  width: auto; /* Pildi laiuse proportsioonid säilivad */
+  max-width: 100%; /* Veendu, et pilt ei lähe üle konteineri laiuse */
+  object-fit: contain; /* Säilita proportsioonid */
+}
+div.üld h1 {
+  font-size: 8rem ;
+  margin: 15rem 0 0 0;
+  padding-left: 10rem;
+}
+div.üld h2 {
+  font-size: 3rem ;
+
+  font-family: unbounded;
+}
+
+.tekst {
+  font-size: 2rem;
+ font-family: montserrat;
+  padding-left: 10rem;
+}
+
+.horizontal-line {
+    height: 1px; /* Paksus */
+    background-color: #025F81; 
+  
+    margin: 8rem 10rem 0 10rem; 
+}
+a {
+  text-decoration: none;
+  color: #025F81;
+  font-weight: bold;
+}
+/*
+@media (orientation:portrait) {
+
+}
+  */
+  </style>
+  </head>
+		<body>
+      <body>
+        
+        
+      
+          <div class="üld">
+            <header id="navigation-menu"></header>
+            
+              <h1> Interaktiivne graafika</h1>
+              <div class="horizontal-line"></div>
+              <div class="tekst">
+                <h2>Fotograafia lehe wireframe loomine</h2>
+                  <p>Loon enda fotograafia lehele wireframei. Kuna mul on kirjatüübid juba olemas, siis need on juba wireframes näha. Leht töötab veidi teisti kui tavalised- on horisontaalselt scrollitav.<a href="https://www.figma.com/proto/cY9mf3b89147Eo7rMb1u3Z/Silja-Foto?node-id=1-2&t=CGL6mDfAU7K3L9WF-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=4%3A202">Figma</a></p> 
+            </div>
+           <div class="container">
+            
+            <div class="image-container">
+                
+                    <img src="pildid/sf1.png" alt="wireframe">
+                   
+                
+            </div>
+            <div class="image-container">
+                
+                    <img src="pildid/sf2.png" alt="uxui">    
+            </div>
+            <div class="image-container">
+                
+                <img src="pildid/sf3.png" alt="uxui">    
+        </div>
+        <div class="image-container">
+                
+            <img src="pildid/sf4.png" alt="uxui">    
+    </div>
+    <div class="image-container">
+                
+        <img src="pildid/sf5.png" alt="uxui">    
+</div>
+<div class="image-container">
+                
+    <img src="pildid/sf6.png" alt="uxui">    
+</div>
+<div class="image-container">
+                
+    <img src="pildid/sf7.png" alt="uxui">    
+</div>
+<div class="image-container">
+                
+    <img src="pildid/sf8.png" alt="uxui">    
+</div>
+<div class="image-container">
+                
+    <img src="pildid/sf6.png" alt="uxui">    
+</div>
+          </div>
+
+
+
+
+</div>
+        </div>
+      </div>
+      <script>
+     // Laeb menüü menu.html failist ja asetab selle #menu-container sisse
+document.addEventListener('DOMContentLoaded', () => {
+  const menuContainer = document.getElementById('navigation-menu');
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(data => {
+      menuContainer.innerHTML = data;
+    })
+    .catch(error => console.error('Menüü laadimine ebaõnnestus:', error));
+});
+
+
+	
+          </script>
+</body>
+</html>
