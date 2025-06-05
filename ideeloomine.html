@@ -50,6 +50,7 @@
   gap: 2rem; /* Lisa vahed piltide vahele */
   justify-content: flex-start; /* Paiguta vasakule */
 }
+	
 
 .image-container {
   flex: 0 1 auto; /* Võtab automaatselt vajaliku laiuse, kuid mahub teiste kõrvale, kui ruumi on */
@@ -59,6 +60,14 @@
 .image-container img {
   display: block;
   max-height: 160rem; /* Maksimaalne kõrgus */
+  height: auto; /* Säilitab kõrguse proportsioonid */
+  width: auto; /* Pildi laiuse proportsioonid säilivad */
+  max-width: 100%; /* Veendu, et pilt ei lähe üle konteineri laiuse */
+  object-fit: contain; /* Säilita proportsioonid */
+}
+	.image-container1 img {
+  display: block;
+  max-height: 80rem; /* Maksimaalne kõrgus */
   height: auto; /* Säilitab kõrguse proportsioonid */
   width: auto; /* Pildi laiuse proportsioonid säilivad */
   max-width: 100%; /* Veendu, et pilt ei lähe üle konteineri laiuse */
@@ -129,7 +138,7 @@ a {
             </div>
             <div class="container">
              
-             <div class="image-container">
+             <div class="image-container1">
                  
                      <img src="pildid/minuaasta.png" alt="wireframe">
                     
